@@ -25,12 +25,16 @@ html {
     --text-color: black; 
     --bg-color: rgb(240, 240, 240);
     --form-bg: white;
+    --label-color: rgb(36, 36, 36);
+    --form-shadow: rgb(51, 51, 51);
 }
 
 :root.dark {
     --text-color: white; 
     --bg-color: black;
-    --form-bg: grey;
+    --form-bg: rgb(37, 37, 37);
+    --label-color: rgb(212, 212, 212);
+    --form-shadow: rgb(56, 56, 56);
 }
 
 :root {
@@ -45,7 +49,7 @@ body {
     color: var(--text-color);
 }
 
-p, div, span{
+p, div {
     font-size: 0.6rem;
     color: var(--text-color);
 }
@@ -89,8 +93,12 @@ div.logo-heading {
 
 div.content {
     width: 65vw;
+    position: relative;
 }
 
+.text {
+    padding-top: 20px;
+}
 .text > p {
     padding: 20px 30px 0 0;
 }
@@ -106,7 +114,7 @@ form {
 .form-section {
     background-color: var(--form-bg);
     padding: 20px 0 20px 35px;
-    box-shadow: 0 4px 8px rgb(51, 51, 51);
+    box-shadow: 0 4px 8px var(--form-shadow);
 }
 
 .form-inputs {
@@ -126,7 +134,7 @@ input, label {
 
 label {
     text-transform: uppercase;
-    color: rgb(36, 36, 36);
+    color: var(--label-color);
     font-size: 0.6rem;
 }
 
@@ -149,7 +157,7 @@ input:focus {
 }
 
 .submit-container {
-    padding: 15px 0 0 35px;
+    padding: 20px 0 0 35px;
 }
 
 button {
@@ -169,7 +177,7 @@ button.create-acc {
     font-size: 0.6rem;
 }  
 
-button.log-in {
+button.log-in, .theme-toggle-but {
     padding: 5px 15px;
 }
 
@@ -179,4 +187,10 @@ button.log-in {
 
     align-items: center;
     gap: 10px;
+}
+
+.theme-container { 
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
