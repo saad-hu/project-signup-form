@@ -24,11 +24,13 @@ html {
 :root.light {
     --text-color: black; 
     --bg-color: rgb(240, 240, 240);
+    --form-bg: white;
 }
 
 :root.dark {
     --text-color: white; 
     --bg-color: black;
+    --form-bg: grey;
 }
 
 :root {
@@ -44,13 +46,8 @@ body {
 }
 
 p, div, span{
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: var(--text-color);
-}
-
-
-p + p {
-    margin-top: 20px;
 }
 
 .image-sidebar {
@@ -94,3 +91,92 @@ div.content {
     width: 65vw;
 }
 
+.text > p {
+    padding: 20px 30px 0 0;
+}
+
+.content > *:not(form) {
+    padding-left: 35px;
+}
+
+form {
+    padding-top: 20px;
+}
+
+.form-section {
+    background-color: var(--form-bg);
+    padding: 20px 0 20px 35px;
+    box-shadow: 0 4px 8px rgb(51, 51, 51);
+}
+
+.form-inputs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-inputs > div {
+    width: 400px;
+    padding-top: 10px;
+}
+
+input, label {
+    display: block;
+    width: 75%;
+}
+
+label {
+    text-transform: uppercase;
+    color: rgb(36, 36, 36);
+    font-size: 0.6rem;
+}
+
+input {
+    appearance: none;
+    border: 1px rgb(116, 116, 116) solid;
+    border-radius: 5px;
+    height: 28px;
+    padding: 5px;
+    font-size: 0.6rem;
+    font-family: poppins;
+}
+
+label + input {
+    margin-top: 5px;
+}
+
+input:focus {
+    box-shadow: 1px 1px 10px inset rgb(190, 190, 190);
+}
+
+.submit-container {
+    padding: 15px 0 0 35px;
+}
+
+button {
+    font-family: poppins;
+    background-color: rgb(167, 2, 167);
+    color: white;
+    border: 1px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(136, 0, 136);;
+}
+
+button.create-acc {
+    padding: 10px 20px;
+    font-size: 0.6rem;
+}  
+
+button.log-in {
+    padding: 5px 15px;
+}
+
+.existing-user-container {
+    padding-top: 25px;
+    display: flex;
+
+    align-items: center;
+    gap: 10px;
+}

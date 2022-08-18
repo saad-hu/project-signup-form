@@ -21,54 +21,66 @@
 
         <div class="theme-container"><span class="theme-name">light</span> mode</div>
         
+        <div class="text">
+            <p>This is not a real online service! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non enim quis libero vehicula lacinia sed vitae sapien.</p>
 
-        <p>This is not a real online service! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non enim quis libero vehicula lacinia sed vitae sapien. Mauris quam nulla, mattis ac lobortis nec, rutrum non neque. </p>
-        <p>You <em>know</em> what to do.</p>
+            <p>You <em>know</em> what to do.</p>
+        </div>
 
 
         <form>
             <div class="form-section">
-                <h3>Sign Up!</h3>
+                <h3 class="form-heading">Sign Up!</h3>
 
-                <div>
-                    <label for="fname">First Name*</label>
-                    <input type="text" name="fname" id="fname" required>
+                <div class="form-inputs">
+                    <div>
+                        <label for="fname">First Name*</label>
+                        <input type="text" name="fname" id="fname" required>
+                    </div>
+    
+                    <div>
+                        <label for="lname">Last Name*</label>
+                        <input type="text" name="lname" id="lname" required>
+                    </div>
+    
+                    <div>
+                        <label for="email">Email*</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+    
+                    <div>
+                        <label for="number">Phone Number</label>
+                        <input type="tel" name="number" id="number">
+                    </div>
+    
+                    <div>
+                        <label for="pw">Password*</label>
+                        <input type="password" name="pw" id="pw" required>
+                    </div>
+    
+                    <div>
+                        <label for="confirm-pw">Confirm Password*</label>
+                        <input type="password" name="confirm-pw" id="confirm-pw" required>
+                    </div>
                 </div>
-
-                <div>
-                    <label for="lname">Last Name*</label>
-                    <input type="text" name="lname" id="lname" required>
-                </div>
-
-                <div>
-                    <label for="email">Email*</label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-
-                <div>
-                    <label for="number">Phone Number</label>
-                    <input type="tel" name="number" id="number">
-                </div>
-
-                <div>
-                    <label for="pw">Password*</label>
-                    <input type="password" name="pw" id="pw" required>
-                </div>
-
-                <div>
-                    <label for="confirm-pw">Confirm Password*</label>
-                    <input type="password" name="confirm-pw" id="confirm-pw" required>
-                </div>
+                
             </div>
 
-            <div>
+            <div class="submit-container">
                 <button type="submit" class="create-acc">Create Account</button>
             </div>
 
         </form>
 
-        <p>Already have an account?</p>
-        <button class="log-in">Log in</button>
+        <div class="existing-user-container">
+            <p>Already have an account?</p>
+
+            <div>
+                <button class="log-in">Log in</button>
+            </div>
+        </div>
+
+        
 
     </div>
 
