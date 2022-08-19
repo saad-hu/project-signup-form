@@ -27,6 +27,7 @@ html {
     --form-bg: white;
     --label-color: rgb(36, 36, 36);
     --form-shadow: rgb(51, 51, 51);
+    --input-focus-shadow: rgb(190, 190, 190);
 }
 
 :root.dark {
@@ -35,6 +36,7 @@ html {
     --form-bg: rgb(37, 37, 37);
     --label-color: rgb(212, 212, 212);
     --form-shadow: rgb(56, 56, 56);
+    --input-focus-shadow: rgb(119, 119, 119);
 }
 
 :root {
@@ -113,7 +115,7 @@ form {
 
 .form-section {
     background-color: var(--form-bg);
-    padding: 20px 0 20px 35px;
+    padding: 20px 0 35px 35px;
     box-shadow: 0 4px 8px var(--form-shadow);
 }
 
@@ -153,7 +155,7 @@ label + input {
 }
 
 input:focus {
-    box-shadow: 1px 1px 10px inset rgb(190, 190, 190);
+    box-shadow: 1px 1px 10px inset var(--input-focus-shadow);
 }
 
 .submit-container {
@@ -193,4 +195,17 @@ button.log-in, .theme-toggle-but {
     position: absolute;
     top: 5px;
     right: 5px;
+}
+
+span{
+    position: relative;
+}
+
+.no-pw-match + span::after {
+    position: absolute;
+    width: 180px;
+    content: "*Passwords do not match";
+    font-size: 0.5rem;
+    color: red;
+    top: 5px;
 }
