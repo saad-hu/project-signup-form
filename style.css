@@ -209,3 +209,44 @@ span{
     color: red;
     top: 5px;
 }
+
+@media screen and (max-width: 600px) {
+
+    body{
+      flex-direction: column;
+    }
+  
+    .image-sidebar {
+      width: 100vw;
+      height: 35vh;
+
+      background-size: cover;
+      background-position: center bottom;
+      position: relative;
+    }
+  
+    
+    img.logo {
+      width: 35px;
+      height: auto;
+    }
+  
+    div.logo-heading {
+      font-size: 1.1rem;
+    }
+  
+    .sidebar-logo {
+      padding: 5px 0;
+      top: 30%;
+    }
+  
+    div.content {
+      width: 100vw;
+    }
+
+    .no-pw-match + span::after {
+        width: 175px;
+        top: -50px;
+        left: 180px;
+    }
+  }
